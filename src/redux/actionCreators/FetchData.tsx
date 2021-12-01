@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { IData } from "../../types/IData";
-import { fetchDataSucces } from "../reducers/Reducer";
+import { fetchDataSucces } from "../reducers/FetchData";
 
 export const fetchData = createAsyncThunk(
   "weatherReducer/fetchData",

@@ -73,9 +73,17 @@
 
 .pizza__button {
   background-color: inherit;
-  border-radius: 10px;
+  border-radius: 25px;
   padding: 5px 25px;
   cursor: pointer;
   border: 2px solid #fe5f1e;
   color: #fe5f1e;
+  transition: 0.1s;
+}
+.pizza__button:hover {
+  transform: scale(1.1);
+}
+.pizza__button:active {
+  background-color: #fe5f1e;
+  color: white;
 }

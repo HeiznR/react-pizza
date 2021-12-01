@@ -1,27 +1,25 @@
 import { NavLink } from "react-router-dom";
+import { useTypedSelector } from "../../hooks/useTypedSelector";
 import styles from "./Header.module.scss";
 
 const Header = () => {
+  const mass = useTypedSelector((state) => state.cart);
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img src="logo.png" alt="" />
+        <NavLink to="/">
+          <img src="logo.png" alt="" />
+        </NavLink>
         <div>
           <p>REACT PIZZA</p>
           <p>The best pizza in universe</p>
         </div>
       </div>
-      <nav>
-        <NavLink className={styles.header__link} to="/">
-          Home
-        </NavLink>
-        <NavLink className={styles.header__link} to="/about">
-          About
-        </NavLink>
-        <NavLink className={styles.header__link} to="/cart">
-          Cart
-        </NavLink>
-      </nav>
+
+      <NavLink className={styles.header__link} to="/cart">
+        <div>{mass.count}</div>
+        <div>{mass.price}</div>
+      </NavLink>
     </header>
   );
 };

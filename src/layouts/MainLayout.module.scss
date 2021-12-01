@@ -6,17 +6,4 @@
   margin: 40px auto;
   border-radius: 20px;
   background-color: white;
-
-  & .wrapper__main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-self: center;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    max-width: 1500px;
-    margin: 0 auto;
-    & > * {
-    }
-  }
 }

@@ -4,18 +4,21 @@ import { useDispatch } from "react-redux";
 import { useTypedSelector } from "../hooks/useTypedSelector";
 import Pizza from "../component/Pizza/Pizza";
 import { useEffect } from "react";
+import styles from "./MainPage.module.scss";
 
 const MainPage = () => {
   const dispatch = useDispatch();
-  const mass = useTypedSelector((state) => state.fetch.pizzas);
+  const pizzasFromDB = useTypedSelector((state) => state.fetch.pizzas);
   useEffect(() => {
     dispatch(fetchData("db.json"));
   }, [dispatch]);
   return (
     <MainLayout>
-      {mass.map((mas) => {
-        return <Pizza key={mas.id} pizza={mas} />;
-      })}
+      <div className={styles.main}>
+        {pizzasFromDB.map((pizza) => {
+          return <Pizza key={pizza.id} pizza={pizza} />;
+        })}
+      </div>
     </MainLayout>
   );
 };

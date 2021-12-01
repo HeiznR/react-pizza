@@ -16,26 +16,31 @@
       height: 70px;
       margin-right: 20px;
     }
-    p:first-child{
+    p:first-child {
       font-size: 24px;
       font-weight: 600;
     }
-    p{
+    p {
       font-size: 16px;
       font-weight: 400;
     }
-
+    p:last-child {
+      color: #7b7b7b;
+    }
   }
-  & nav {
+
+  & .header__link {
     display: flex;
-    flex-direction: row;
-    flex-grow: 3;
-    & a {
-      display: block;
-      flex-grow: 1;
-      text-decoration: none;
-      padding: 10px;
-      color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    background-color: #fe5f1e;
+    border-radius: 25px;
+    & div {
+      padding: 5px 10px;
+    }
+    & div:first-child {
+      border-right: 1px solid white;
     }
   }
 }
