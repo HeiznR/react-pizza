@@ -55,8 +55,9 @@ const Pizza: FC<IProps> = ({ pizza }) => {
         </div>
       </div>
       <div className={styles.pizza__add}>
-        <p>od {pizza.price} zł</p>
+        <p>{pizza.price} $</p>
         <button
+          className={styles.pizza__button}
           onClick={() =>
             dispatch(
               addPizzaToCart({
@@ -68,7 +69,6 @@ const Pizza: FC<IProps> = ({ pizza }) => {
               })
             )
           }
-          className={styles.pizza__button}
         >
           Add
         </button>

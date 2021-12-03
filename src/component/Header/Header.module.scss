@@ -44,3 +44,125 @@
     }
   }
 }
+@media screen and (max-width: 1690px) and (orientation: landscape) {
+  .header {
+    & .logo {
+      img {
+        width: 60px;
+        height: 60px;
+      }
+      p:first-child {
+        font-size: 22px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+    & .header__link {
+      & div {
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .header {
+    & .logo {
+      img {
+        width: 50px;
+        height: 50px;
+      }
+      p:first-child {
+        font-size: 20px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+
+    & .header__link {
+      & div {
+        font-size: 12px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  .header {
+    & .logo {
+      img {
+        width: 50px;
+        height: 50px;
+      }
+      p:first-child {
+        font-size: 20px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+
+    & .header__link {
+      & div {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) and (orientation: portrait) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    & .logo {
+      img {
+        width: 50px;
+        height: 50px;
+      }
+      p:first-child {
+        font-size: 20px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+
+    & .header__link {
+      width: 150px;
+      display: flex;
+      justify-content: center;
+      & div {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) and (orientation: portrait) {
+  .header {
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    & .logo {
+      img {
+        width: 50px;
+        height: 50px;
+      }
+      p:first-child {
+        font-size: 20px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+
+    & .header__link {
+      width: 150px;
+      display: flex;
+      justify-content: center;
+      & div {
+        font-size: 12px;
+      }
+    }
+  }
+}

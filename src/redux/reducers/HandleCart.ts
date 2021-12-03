@@ -17,9 +17,15 @@ const AddToCart = createSlice({
   initialState,
   reducers: {
     addPizzaToCart(state, action: PayloadAction<IPizza>) {
-      state.totalCount++;
-      state.pizzas?.push(action.payload);
-      state.totalPrice += action.payload.price;
+      if (state.totalCount === 0) {
+        state.pizzas?.splice(0, 1, action.payload);
+        state.totalCount++;
+        state.totalPrice += action.payload.price;
+      } else {
+        state.totalCount++;
+        state.pizzas?.push(action.payload);
+        state.totalPrice += action.payload.price;
+      }
     },
     removePizzaFromCart(state, action: PayloadAction<IPizza>) {
       state.totalCount--;

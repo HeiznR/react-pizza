@@ -6,12 +6,19 @@
   width: 20%;
   margin: 10px;
   border-radius: 10px;
-  display: flex;
   padding: 10px;
   font-weight: 500;
+  font-size: 20px;
+  height: 50%;
+  flex-wrap: nowrap;
   & > p {
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 1em;
+    height: 50px;
+    text-align: center;
+    flex-wrap: nowrap;
   }
   & img {
     width: 80%;
@@ -27,15 +34,17 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
       margin-bottom: 10px;
 
       & > p {
-        display: flex;
         cursor: pointer;
-        justify-content: center;
         width: 45%;
+        line-height: 100%;
         padding: 5px 20px;
         border-radius: 5px;
+        font-size: 1em;
+        text-align: center;
       }
     }
     & .pizza__sizes {
@@ -50,6 +59,7 @@
         width: 30%;
         padding: 5px 20px;
         border-radius: 5px;
+        font-size: 1em;
       }
     }
   }
@@ -60,9 +70,28 @@
     align-items: center;
     width: 100%;
     border-radius: 10px;
-    padding: 10px;
+    padding: 10px 0px 10px 10px;
+    & > p {
+      font-weight: 600;
+    }
     & > * {
-      font-size: 24px;
+      font-size: 1.2em;
+    }
+    & .pizza__button {
+      background-color: inherit;
+      border-radius: 25px;
+      padding: 5px 25px;
+      cursor: pointer;
+      border: 2px solid #fe5f1e;
+      color: #fe5f1e;
+      transition: 0.1s;
+    }
+    & .pizza__button:hover {
+      transform: scale(1.1);
+    }
+    & .pizza__button:active {
+      background-color: #fe5f1e;
+      color: white;
     }
   }
 }
@@ -71,19 +100,108 @@
   background-color: white;
 }
 
-.pizza__button {
-  background-color: inherit;
-  border-radius: 25px;
-  padding: 5px 25px;
-  cursor: pointer;
-  border: 2px solid #fe5f1e;
-  color: #fe5f1e;
-  transition: 0.1s;
+@media screen and (max-width: 1690px) and (orientation: landscape) {
+  .pizza {
+    width: 25%;
+    display: flex;
+    & > p {
+      flex-shrink: 2;
+    }
+    & .pizza__info {
+      & .pizza__type {
+        & > p {
+          font-size: 0.8em;
+        }
+      }
+      & .pizza__sizes {
+        & > * {
+          font-size: 0.8em;
+        }
+      }
+    }
+    & .pizza__add {
+      & > * {
+        font-size: 0.8em;
+      }
+    }
+  }
 }
-.pizza__button:hover {
-  transform: scale(1.1);
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+  .pizza {
+    width: 35%;
+    & .pizza__info {
+      & .pizza__type {
+        & > p {
+          padding: 5px 0px;
+          font-size: 0.8em;
+        }
+      }
+      & .pizza__sizes {
+        & > * {
+          font-size: 0.8em;
+        }
+      }
+    }
+    & .pizza__add {
+      & > * {
+        font-size: 0.8em;
+      }
+    }
+  }
 }
-.pizza__button:active {
-  background-color: #fe5f1e;
-  color: white;
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  .pizza {
+    & .pizza__info {
+      & .pizza__type {
+        & > p {
+          padding: 5px 0px;
+          font-size: 0.8em;
+        }
+      }
+      & .pizza__sizes {
+        & > * {
+          font-size: 0.8em;
+        }
+      }
+    }
+    width: 35%;
+    & .pizza__add {
+      & > * {
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) and (orientation: portrait) {
+  .pizza {
+    width: 60%;
+    & img {
+      width: 80%;
+      margin-bottom: 10px;
+    }
+    & .pizza__info {
+      & .pizza__type {
+        & > p {
+          padding: 5px 0px;
+          font-size: 0.8em;
+        }
+      }
+      & .pizza__sizes {
+        & > * {
+          font-size: 0.8em;
+        }
+      }
+    }
+    & .pizza__add {
+      display: flex;
+      flex-direction: column;
+      & > * {
+        margin-bottom: 20px;
+        font-size: 0.9em;
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
 }
