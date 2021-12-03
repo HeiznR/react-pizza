@@ -1,11 +1,11 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import thunk from "redux-thunk";
 import dataFetch from "./reducers/FetchData";
-import AddToCart from "./reducers/AddPizzaToCart";
+import HandleCart from "./reducers/HandleCart";
 
 const rootReducer = combineReducers({
   fetch: dataFetch,
-  cart: AddToCart,
+  cart: HandleCart,
 });
 export type rootState = ReturnType<typeof rootReducer>;
 export const store = configureStore({

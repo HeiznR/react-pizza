@@ -1,0 +1,71 @@
+.cart__handle {
+  & div:first-child {
+    flex-grow: 1;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: left;
+  }
+  & button {
+    text-align: right;
+    border: none;
+    background-color: inherit;
+    color: #b6b6b6;
+    cursor: pointer;
+    font-size: 18px;
+  }
+}
+.cart__pizzaInCart {
+  display: flex;
+  align-items: center;
+  .cart__infoAboutPizza {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 0px;
+    border-top: 2px solid whitesmoke;
+    & img {
+      width: 70px;
+      height: 70px;
+      margin-right: 30px;
+    }
+    & > div > p:first-child {
+      font-weight: 500;
+      font-size: 24px;
+    }
+  }
+  & button {
+    padding: 10px;
+    background-color: inherit;
+    border-radius: 20px;
+    border: 1px solid #fe5f1e;
+    color: #fe5f1e;
+    cursor: pointer;
+  }
+  & button:hover {
+    border: 1px solid white;
+    background-color: #fe5f1e;
+    color: white;
+  }
+}
+.cart__info {
+  & > * {
+    flex-grow: 1;
+    font-size: 24px;
+    & > * {
+      font-weight: 600;
+    }
+  }
+  & div:nth-child(2) {
+    text-align: right;
+  }
+}
+
+.container {
+  display: flex;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 30px 0px;
+}

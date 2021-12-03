@@ -17,8 +17,8 @@ const Header = () => {
       </div>
 
       <NavLink className={styles.header__link} to="/cart">
-        <div>{mass.count}</div>
-        <div>{mass.price}</div>
+        <div>{mass.totalCount}</div>
+        <div>{mass.totalPrice}</div>
       </NavLink>
     </header>
   );

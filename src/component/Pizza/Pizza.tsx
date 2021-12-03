@@ -3,14 +3,14 @@ import { IData } from "../../types/IData";
 import styles from "./Pizza.module.scss";
 import classNames from "classnames";
 import { useDispatch } from "react-redux";
-import { AddPizzaToCart } from "../../redux/reducers/AddPizzaToCart";
+import { addPizzaToCart } from "../../redux/reducers/HandleCart";
 interface IProps {
   pizza: IData;
 }
 const Pizza: FC<IProps> = ({ pizza }) => {
   const dispatch = useDispatch();
   const types = ["thin crust", "fat crust"];
-  const sizes = ["26", "30", "40"];
+  const sizes = [26, 30, 40];
   const [activeType, setActiveType] = useState(0);
   const [activeSize, setActiveSize] = useState(0);
 
@@ -59,10 +59,10 @@ const Pizza: FC<IProps> = ({ pizza }) => {
         <button
           onClick={() =>
             dispatch(
-              AddPizzaToCart({
+              addPizzaToCart({
                 name: pizza.name,
-                type: "1",
-                size: 23,
+                type: types[activeType],
+                size: sizes[activeSize],
                 imgUrl: pizza.imageUrl,
                 price: pizza.price,
               })
