@@ -1,7 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useTypedSelector } from "../../../hooks/useTypedSelector";
 import {
-  addPizzaToCart,
   clearCart,
   removePizzaFromCart,
 } from "../../../redux/reducers/HandleCart";
